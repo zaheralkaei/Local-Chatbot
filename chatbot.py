@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jul  4 14:45:29 2024
-
+This is a basic local chatbot powered by Ollama
 @author: zaher Alkaei
 """
 import threading
@@ -21,8 +21,7 @@ def show_thinking_symbol(stop_event):
         i += 1
     print("\r", end="")  # Clear the line when done
 
-# Part IV: The chatbot
-# It uses Ollama from langchain.llms
+# Chatbot powered by Ollama from langchain.llms
 def main():
     print("Welcome to Chat! You are chatting with Ollama.\n")
     print("At anytime you can type 'exit' to leave this chat.\n")
@@ -59,7 +58,7 @@ def main():
         thinking_thread.start()
         
         try:
-            # Generate response from the LLM using conversation history (simulate streaming)
+            # Generate response from the LLM using conversation history 
             response = llm.invoke(conversation_history)
         except Exception as e:
             print(f"Error generating response: {e}")
